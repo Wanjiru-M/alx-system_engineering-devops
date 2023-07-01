@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Using the until loop to print 'Best School'
+counter=10
+until [ $counter -lt 1 ]; do
+  echo "Best School"
+  ((counter -= 1))
+done
