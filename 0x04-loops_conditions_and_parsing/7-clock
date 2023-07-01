@@ -16,4 +16,3 @@ while [ $time -lt 780 ]; do
 
     ((time++))
 done
-Using a while loop an
