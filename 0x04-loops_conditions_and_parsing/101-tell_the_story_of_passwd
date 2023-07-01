@@ -2,13 +2,12 @@
 # Tells a story based on the contents of the `/etc/passwd` file.
 
 while IFS=':' read -r line; do
-    fields=($line)
-    username="${fields[0]}"
-    password="${fields[1]}"
-    uid="${fields[2]}"
-    gid="${fields[3]}"
-    info="${fields[4]}"
-    home="${fields[5]}"
-    shell="${fields[6]}"
+    username=$(awk -F':' '{print $1}' <<< "$line")
+    gid=$(awk -F':' '{print $4}' <<< "$line")
+    home=$(awk -F':' '{print $6}' <<< "$line")
+    shell=$(awk -F':' '{print $NF}' <<< "$line")
+    uid=$(awk -F':' '{print $3}' <<< "$line")
+    password=$(awk -F':' '{print $2}' <<< "$line")
+    info=$(awk -F':' '{print $5}' <<< "$line")
     echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $uid's place is protected by the passcode $password, more info about the user here: $info"
 done < /etc/passwd
