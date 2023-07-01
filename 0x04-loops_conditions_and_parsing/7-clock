@@ -2,17 +2,18 @@
 # Displays the time for 12 horus and 59 minutes.
 #   Displays hours from 0 to 12
 #   Displays minutes from 1 to 59
-time=0
 
-while [ $time -lt 780 ]; do
-    hour=$((time / 60))
-    minute=$((time % 60))
+count=0
+
+while [ $count -lt 708 ]; do
+    hour=$((count / 60))
+    minute=$((count % 60))
 
     if [ $minute -eq 0 ]; then
         echo "Hour: $hour"
+    else
+        echo "$minute"
     fi
 
-    echo $((minute + 1))
-
-    ((time++))
+    ((count++))
 done
