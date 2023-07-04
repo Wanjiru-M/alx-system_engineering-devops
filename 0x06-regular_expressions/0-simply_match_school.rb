@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+#regular expression must match School
 regex = /School/
 input = ARGV[0]
 
