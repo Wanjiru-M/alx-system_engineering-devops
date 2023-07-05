@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# ping command usage
 if [ $# -ne 1 ]; then
   echo "Usage: $0 {IP_ADDRESS}"
   exit 1
