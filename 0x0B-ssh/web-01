@@ -10,4 +10,4 @@ ssh-add ~/.ssh/school
 
 
 
-ssh ubuntu@100.25.181.60
+ssh ubuntu@100.25.147.12
