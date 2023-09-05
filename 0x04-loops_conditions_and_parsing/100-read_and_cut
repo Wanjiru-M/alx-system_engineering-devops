@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#script that displays the content of the file /etc/passwd
+while IFS= read -r line; do
+    username=$(echo "$line" | cut -d ':' -f 1)
+    uid=$(echo "$line" | cut -d ':' -f 3)
+    home=$(echo "$line" | cut -d ':' -f 6)
+    echo "$username:$uid:$home"
+done < /etc/passwd

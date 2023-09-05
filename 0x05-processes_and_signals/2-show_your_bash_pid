@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# shellcheck 
+ps -aux | grep bash
+

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+#Displays 'Best School'. Displays Hi on the 9th iteration
+counter=1
+while ((counter <= 10)); do
+  if [ $counter -eq 9 ]; then
+    printf "%s\n%s\n" "Best School" "Hi"
+  else
+    echo "Best School"
+  fi
+  ((counter++))
+done
